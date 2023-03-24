@@ -28,6 +28,16 @@ Follow these steps to install and run the Reddit clone app on your local machine
 ## Test Ingress DNS for the app:
 - Test Ingress by typing this command: `curl http://domain.com/test`
 
+## Cluster Monitoring using Prometheus & Grafana
+
+Key Components :
+
+- Prometheus server - Processes and stores metrics data
+- Alert Manager - Sends alerts to any systems/channels
+- Grafana - Visualize scraped data in UI
+
+
+
 ## Contributing
 If you'd like to contribute to this project, please open an issue or submit a pull request.
 
