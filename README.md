@@ -52,6 +52,39 @@ kubectl get pods -n prometheus
 kubectl get svc -n prometheus
 ```
 
+Edit Prometheus Service (Edit type : LoadBalancer)
+```sh
+kubectl edit svc stable-kube-prometheus-sta-prometheus -n prometheus
+```
+
+Edit Grafana Service (Edit type : LoadBalancer) 
+```sh
+kubectl edit svc stable-grafana -n prometheus
+```
+
+Verify if service is changed to LoadBalancer and also to get the Load Balancer URL.
+```sh
+kubectl get svc -n prometheus
+```
+
+Access Grafana Dashboard
+```sh
+UserName: admin 
+Password: prom-operator
+```
+
+
+For creating a dashboard to monitor the cluster:
+
+```sh
+Click '+' button on left panel and select ‘Import’.
+Enter 12740 dashboard id under Grafana.com Dashboard.
+Click ‘Load’.
+Select ‘Prometheus’ as the endpoint under prometheus data sources drop down.
+Click ‘Import’.
+```
+
+
 ## Contributing
 If you'd like to contribute to this project, please open an issue or submit a pull request.
 
