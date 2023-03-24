@@ -38,11 +38,19 @@ Key Components :
 
 Pre Requisites :
 - EKS Cluster is setup already
-- Install Helm3
+- Install Helm
 - EC2 instance to access EKS cluster
 
-
-
+Installation Steps 
+```sh
+helm repo add stable https://charts.helm.sh/stable
+helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+helm search repo prometheus-community
+kubectl create namespace prometheus
+helm install stable prometheus-community/kube-prometheus-stack -n prometheus
+kubectl get pods -n prometheus
+kubectl get svc -n prometheus
+```
 
 ## Contributing
 If you'd like to contribute to this project, please open an issue or submit a pull request.
