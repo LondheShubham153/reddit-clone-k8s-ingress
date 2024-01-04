@@ -12,7 +12,7 @@ jobs:
     - name: Publish to Registry
       uses: mr-smithers-excellent/docker-build-push@v6
       with:
-        image: docker-hub-repo/image-name
+        image: 100180/redditclone
         registry: docker.io
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
