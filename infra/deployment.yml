@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: reddit-clone
-        image: 100180/redditclone:master-93d452f
+        image: 100180/redditclone:master-2a5262a
         env:
         - name: AWS_ACCESS_KEY_ID
           valueFrom:
