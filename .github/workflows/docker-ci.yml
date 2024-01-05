@@ -21,7 +21,7 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
         
     - name: replace
-      uses: Nambers/ReplaceStringInFile@v1
+      uses: Nambers/ReplaceStringInFile@v1.3
       with:
         path: ${{ github.workspace }}/a.test
         oldString: 100180/redditclone*
