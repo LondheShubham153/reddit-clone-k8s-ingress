@@ -4,7 +4,8 @@ on:
   push:
     branches: [ "master" ]
     paths-ignore:
-      - 'infra/'
+      - 'infra/*'
+      - '.github/*'
      
 
 jobs:
