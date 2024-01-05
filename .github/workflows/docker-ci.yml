@@ -4,7 +4,7 @@ on:
   push:
     branches: [ "master" ]
     paths-ignore:
-    - 'infra/'     
+    - 'infra/*'     
 
 jobs:
   build:
