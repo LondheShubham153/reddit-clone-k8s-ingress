@@ -12,5 +12,5 @@ spec:
     # Port Map
   - port: 3000
     targetPort: 3000
-    protocol: TCP
-  type: LoadBalancer
+    nodeport: 30163
+  type: NodePort
