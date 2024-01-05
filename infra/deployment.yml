@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: reddit-clone-deployment
+  name: reddit-clone-deployments
   labels:
     app: reddit-clone
 spec:
