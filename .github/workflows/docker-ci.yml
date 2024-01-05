@@ -25,6 +25,6 @@ jobs:
       with:
         path: ${{ github.workspace }}/a.test
         oldString: 100180/redditclone*
-        newString: 100180/redditclone:{{id.dockerTags}}
+        newString: 100180/redditclone:{{ meta.dockerTags }}
         showFileContent: true
         
