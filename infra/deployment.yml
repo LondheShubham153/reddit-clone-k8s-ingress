@@ -17,16 +17,5 @@ spec:
       containers:
       - name: reddit-clone
         image: 100180/redditclone:master-2224424
-        env:
-        - name: AWS_ACCESS_KEY_ID
-          valueFrom:
-            secretKeyRef:
-              name: aws-credentials
-              key: AWS_ACCESS_KEY_ID
-        - name: AWS_SECRET_ACCESS_KEY
-          valueFrom:
-            secretKeyRef:
-              name: aws-credentials
-              key: AWS_SECRET_ACCESS_KEY
         ports:
         - containerPort: 3000
