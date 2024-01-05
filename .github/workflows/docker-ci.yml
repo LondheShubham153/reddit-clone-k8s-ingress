@@ -3,7 +3,8 @@ name: Docker Image CI
 on:
   push:
     branches: [ "master" ]
-    paths-ignore: ["infra"]
+    paths-ignore:
+      - 'infra/'
      
 
 jobs:
