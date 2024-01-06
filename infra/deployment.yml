@@ -1,1 +1,21 @@
-100180/redditclone:master-{{github.sha}}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: reddit-clone-deployment
+  labels:
+    app: reddit-clone
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: reddit-clone
+  template:
+    metadata:
+      labels:
+        app: reddit-clone
+    spec:
+      containers:
+      - name: reddit-clone
+        image: 100180/redditclone:master-2224424
+        ports:
+        - containerPort: 3000
