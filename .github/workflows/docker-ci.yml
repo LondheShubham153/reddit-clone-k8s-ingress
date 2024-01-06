@@ -21,10 +21,10 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
 
-    - name: Modify README.md
+    - name: Modify deployment.yml
       uses: jaywcjlove/github-action-modify-file-content@main
       with:
-        path: README.md
+        path: infra/deployment.yml
         body: "100180/redditclone:master-{{github.sha}}"
         overwrite: 'true'
 
