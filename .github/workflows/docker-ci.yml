@@ -20,7 +20,9 @@ jobs:
         registry: docker.io
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
-    - run: git_hash=$(git rev-parse --short "$GITHUB_SHA")
+    - run: |
+        echo "git_hash=$(git rev-parse --short "$GITHUB_SHA")"
+        
 
     - name: Modify deployment.yml
       uses: jaywcjlove/github-action-modify-file-content@main
