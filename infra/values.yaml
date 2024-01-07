@@ -8,7 +8,7 @@ image:
   repository: 100180/redditclone
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "master-375ae74"
+  tag: ""
 
 imagePullSecrets: []
 nameOverride: ""
