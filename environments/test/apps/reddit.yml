@@ -15,7 +15,7 @@ spec:
     namespace: reddit
     server: "https://kubernetes.default.svc"
   source:
-    path: environments\test\reddit
+    path: environments/test/reddit
     repoURL: "https://github.com/guruprasad1809/reddit-clone-k8s-ingress.git"
     targetRevision: master
     helm:
