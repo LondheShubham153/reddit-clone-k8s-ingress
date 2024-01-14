@@ -1,0 +1,14 @@
+helm:
+  parameters:
+  - name: replicaCount
+    value: "1"
+    forcestring: false
+  - name: image.repository
+    value: 100180/redditclone
+    forcestring: false
+  - name: image.tag
+    value: master-d6e9a02
+    forcestring: true
+  - name: image.name
+    value: 100180/redditclone
+    forcestring: true
