@@ -21,7 +21,7 @@ spec:
     helm:
       parameters:
         - name: "replicaCount"
-          value: "4"
+          value: "1"
         - name: "image.repository"
           value: 100180/redditclone
         - name: "image.tag"
