@@ -7,7 +7,7 @@ helm:
     value: 100180/redditclone
     forcestring: false
   - name: image.tag
-    value: master-eb80615
+    value: master-b995043
     forcestring: true
   - name: image.name
     value: 100180/redditclone
