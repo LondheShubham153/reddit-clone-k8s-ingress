@@ -85,22 +85,8 @@ Click ‘Load’.
 Select ‘Prometheus’ as the endpoint under prometheus data sources drop down.
 Click ‘Import’.
 ```
-
-
 ### Images For reference
-
-
-
 <img width="1396" alt="image" src="https://user-images.githubusercontent.com/110477025/227587553-7163c709-85cf-4e23-a00b-823b08758859.png">
-
-
-
 <img width="1400" alt="image" src="https://user-images.githubusercontent.com/110477025/227587788-06ce33dd-3a09-4f36-9bbd-aff0925615ed.png">
-
-
-
-
 ## Contributing
 If you'd like to contribute to this project, please open an issue or submit a pull request.
-
-

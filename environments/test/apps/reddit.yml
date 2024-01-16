@@ -1,0 +1,43 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: reddit-clone
+  namespace: argocd
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: myalias=100180/redditclone
+    argocd-image-updater.argoproj.io/write-back-method: git:secret:argocd/git-creds
+    argocd-image-updater.argoproj.io/git-branch: master
+    argocd-image-updater.argoproj.io/myalias.force-update: "true"
+    argocd-image-updater.argoproj.io/myalias.update-strategy: latest
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: reddit
+    server: "https://kubernetes.default.svc"
+  source:
+    path: environments/test/reddit
+    repoURL: "https://github.com/guruprasad1809/reddit-clone-k8s-ingress.git"
+    targetRevision: master
+    helm:
+      parameters:
+        - name: "replicaCount"
+          value: "1"
+        - name: "image.repository"
+          value: 100180/redditclone
+        - name: "image.tag"
+          value: master-b9d7f51
+      values: |
+        defaultArgs:
+        - --cert-dir=/tmp
+        - --kubelet-preferred-address-types=InternalIP,ExternalIP,Hostname
+        - --kubelet-use-node-status-port
+        - --metric-resolution=15s
+        - --kubelet-insecure-tls
+  project: default
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+    syncOptions:
+      - CreateNamespace=true
